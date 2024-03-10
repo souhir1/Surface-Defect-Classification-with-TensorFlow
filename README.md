@@ -41,4 +41,4 @@ Despite the impressive performance of the model in task2-classification.ipynb, I
 | task2-classification.ipynb        | 8                 | Adam      | 0.001         | 0.1409    | 95.8%         |
 | Enhanced_Model_Complexity.ipynb   | 256               | Adam      | 0.001         | 0.099     | 96%           |
 
-Note: Even with the occurrence of this unusual scenario, the original model achieved remarkable results. Both notebooks utilized the Adam optimizer with a learning rate of 0.001 and implemented early stopping. The enhanced-model-complexity notebook further refined the test data fit, evidenced by a reduced test loss, while maintaining similar accuracy levels.
+Note: Even with the occurrence of this unusual scenario, the original model achieved remarkable results. Both notebooks utilized the Adam optimizer with a learning rate of 0.001 . The enhanced-model-complexity notebook further refined the test data fit, evidenced by a reduced test loss, while maintaining similar accuracy levels.
