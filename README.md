@@ -1,11 +1,10 @@
-# Surface-Defect-Detection-with-TensorFlow-Object-Classification
-This repository houses a comprehensive project aimed at tackling the challenge of surface defect detection through object classification. Utilizing the NEU Surface Defect Database from Kaggle, this project is split into two main tasks: data preparation and image classification.
-# Project Overview
+# Surface-Defect-Classification-with-TensorFlow
+This repository houses a comprehensive project aimed at tackling the challenge of surface defect classification
 
-This project encompasses three 2 tasks, each detailed in separate Jupyter notebooks:
+Utilizing the NEU Surface Defect Database from Kaggle, this project encompasses two tasks, each detailed in separate Jupyter notebooks:
 
 1. **task-1-data-preparation.ipynb**: Focused on dataset preparation, transforming raw data into the efficient TFRecord format for TensorFlow models.
-2. **task2-classification.ipynb**: Implements an object classification model, detailing its architecture, optimization strategies, benchmark results and inference .
+2. **task2-classification.ipynb**: Details the fine-tuning of the Xception model for Surface Defect Classification using TensorFlow, covering its architectural configuration, optimization techniques, benchmark outcomes and inference process.
 4.  **enhanced-model-complexity.ipynb**: An optional exploration that adjusts the model's complexity to address specific challenges identified in task 2.
 
 ## Task 1: Data Preparation
@@ -31,11 +30,10 @@ This project encompasses three 2 tasks, each detailed in separate Jupyter notebo
 | 0.0001        | 67%, 1.2              | 65%, 0.9726            | 51%, 1.5             |
 | 0.00001       | 40%, 1.654            | 38%, 1.60              | 26%, 1.7             |
 
-The Adam optimizer at a learning rate of 0.001 yielded the best performance, with the highest test accuracy and the lowest test loss among the configurations tested.
-
+The Adam optimizer, set at a learning rate of 0.001, delivered optimal results, achieving the highest test accuracy and the lowest test loss among all tested configurations. Consequently, it has been saved and is utilized for inference.
 ## Enhanced Model Complexity Notebook
 
-To tackle the rare scenario identified in task2-classification.ipynb, where validation accuracy exceeded training accuracy and validation loss was lower than training loss, due to constraints on hyperparameter adjustments set by the challenge. By creating this separate notebook, I increased the model's complexity—specifically by enhancing the dense layer to 256 units overcoming the limitations and significantly boosting the model's performance.
+Despite the impressive performance of the model in task2-classification.ipynb, I encountered an unusual scenario where the validation accuracy surpassed the training accuracy. This was due to the simplistic design of the dense layer, which comprised only 8 units and had a 40% dropout rate. Limited by these hyperparameter settings due to the challenge's constraints, I tackled this issue in enhanced-model-complexity.ipynb by increasing the dense layer to 256 units, which improved the model's performance. 
 ### Performance Comparison
 
 | Notebook                          | Dense Layer Units | Optimizer | Learning Rate | Test Loss | Test Accuracy |
@@ -43,4 +41,4 @@ To tackle the rare scenario identified in task2-classification.ipynb, where vali
 | task2-classification.ipynb        | 8                 | Adam      | 0.001         | 0.1409    | 95.8%         |
 | Enhanced_Model_Complexity.ipynb   | 256               | Adam      | 0.001         | 0.099     | 96%           |
 
-Note: Despite the presence of this uncommon scenario, the original model delivered remarkable results. Both notebooks employed the Adam optimizer with a learning rate of 0.001 and implemented early stopping. The Enhanced Model Complexity notebook further refined the test data fit, evidenced by a reduced test loss, while maintaining similar accuracy levels.
+Note: Even with the occurrence of this unusual scenario, the original model achieved remarkable results. Both notebooks utilized the Adam optimizer with a learning rate of 0.001 and implemented early stopping. The enhanced-model-complexity notebook further refined the test data fit, evidenced by a reduced test loss, while maintaining similar accuracy levels.
