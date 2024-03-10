@@ -12,7 +12,7 @@ This project encompasses three 2 tasks, each detailed in separate Jupyter notebo
 
 - Converted the dataset to tf.data.TFRecordDataset format, applying a custom feature schema for tf.train.Example.
 - Generated train and test directories, each containing individual sample TFRecord files.
-- The **Tf-records-samples-for-inference** repository contains samples of the prepared data .
+- The **Tfrecords-samples-for-inference** repository contains samples of the prepared data .
 
 ## Task 2: Classification
 
